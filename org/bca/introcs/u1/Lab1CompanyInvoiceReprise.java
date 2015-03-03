@@ -2,7 +2,7 @@ package org.bca.introcs.u1;
 
 import java.util.Scanner;
 
-public class Day2CompanyInvoiceReprise {
+public class Lab1CompanyInvoiceReprise {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
