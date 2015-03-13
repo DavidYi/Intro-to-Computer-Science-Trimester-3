@@ -1,0 +1,12 @@
+java -classpath (jarfilename).jar (package)
+
+this is used in the command prompt. You use it in the directory
+where the (jarfilename).jar lies.
+
+
+in the command prompt as Adiministrator, run
+assoc .jar=CompressedFolder, which will say that the jar file is
+equal to a zip file.
+
+You then go inside the jar file by finding the file in windows 
+explorer and open it with windows explorer
