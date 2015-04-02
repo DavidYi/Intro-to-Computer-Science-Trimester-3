@@ -1,4 +1,4 @@
-package org.bca.introcs.u2.ex;
+package org.bca.introcs.u2;
 
 import java.util.Scanner;
 
