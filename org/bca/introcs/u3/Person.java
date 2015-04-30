@@ -1,8 +1,8 @@
 package org.bca.introcs.u3;
 
 public class Person {
-	int age;
-	String name, gender;
+	private int age;
+	private String name, gender;
 
 	public Person(String name, String gender) {
 		this.name = name;
@@ -11,8 +11,8 @@ public class Person {
 	}
 
 	public String toString() {
-		return "Person: " + this.name + "; Gender: " + gender + "; Age: "
-				+ this.age;
+		return "Person: " + name + "; Gender: " + gender + "; Age: "
+				+ age;
 
 	}
 
@@ -22,9 +22,9 @@ public class Person {
 	}
 
 	public void celebrate_bday() {
-		this.age += 1;
+		age += 1;
 		System.out.println("Happy Birthday! " + name + " is now "
-				+ this.age);
+				+ age);
 
 	}
 	
