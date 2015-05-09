@@ -3,7 +3,7 @@ package org.bca.introcs.u3;
 public class ClubStudent {
 	private String firstName, lastName, academy;
 	private int year;
-	
+
 	public ClubStudent(String firstName, String lastName, String academy,
 			int year) {
 		this.firstName = firstName;
@@ -11,7 +11,24 @@ public class ClubStudent {
 		this.academy = academy;
 		this.year = year;
 	}
+
+	public ClubStudent(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 	
+	public boolean equals(Object o){
+		ClubStudent s = (ClubStudent)o;
+		
+		if((s.firstName.equals(this.firstName)) && (s.lastName.equals(this.lastName))){
+			return true;
+		}
+		return false;
+	}
+
+	public String toString() {
+		return lastName + ", " + firstName + " (" + academy + ", " + year + ")";
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -44,6 +61,5 @@ public class ClubStudent {
 	public void setYear(int year) {
 		this.year = year;
 	}
-	
 
 }
