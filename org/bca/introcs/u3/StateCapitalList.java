@@ -62,7 +62,7 @@ public class StateCapitalList {
 			expandList();
 		}
 		StateCapital temp = new StateCapital(line[0], line[1]);
-		state[numState] = temp;
+		state[numState - 1] = temp;
 	}
 
 	private void expandList() {

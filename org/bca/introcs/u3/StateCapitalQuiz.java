@@ -17,17 +17,21 @@ public class StateCapitalQuiz {
 
 		String choice = (String) JOptionPane.showInputDialog(null,
 				"Which quiz file would you like to use?", "Quiz",
-				JOptionPane.QUESTION_MESSAGE, null, quizNames, quizNames[0]);
+				JOptionPane.QUESTION_MESSAGE, null, quizNames, quizNames[2]);
 		
 		StateCapitalList scl = new StateCapitalList(choice);
 		
 		String answer = "";
 		
 		
-		while(scl.statesRemaining() != 0 || answer != null){
+		while(scl.statesRemaining() != 0 && answer != null){
 			StateCapital temp = scl.getRandomState();
-			answer = JOptionPane.showInputDialog("What is the capital of " + temp.state);
-			if (answer.toUpperCase().equals(temp.capital.toUpperCase())){
+			answer = (String) JOptionPane.showInputDialog("What is the capital of " + temp.state);
+			if (answer == null){
+				continue;
+			}
+			guesses++;
+			if (answer.toLowerCase().equals(temp.capital.toLowerCase())){
 				scl.remove(temp);
 				JOptionPane.showMessageDialog(null,
 						"Correct!");
@@ -37,10 +41,10 @@ public class StateCapitalQuiz {
 				JOptionPane.showMessageDialog(null,
 						"Incorrect. The capital is " + temp.capital);
 			}
-			guesses++;
 		}
 		
 
+		
 		JOptionPane.showMessageDialog(null,
 				"You named " + correct + " correct capitals in " + guesses + " guesses.");
 
