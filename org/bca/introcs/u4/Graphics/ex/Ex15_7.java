@@ -34,25 +34,28 @@ public class Ex15_7 extends JFrame {
 }
 
 class TTT extends JPanel {
+	int i;
+	public TTT(){
+		Random rand = new Random();
+		i = rand.nextInt(3);
+	}
 	protected void paintComponent(Graphics g) {
 		super.paintComponents(g);
 
-		Random rand = new Random();
 		int x = getWidth();
 		int y = getHeight();
 		int r;
 
-		int i = rand.nextInt();
-
 		if (i == 2) {
-			r = (x-10)/2;
-			
-			g.drawOval(x/2, y/2, r, r);
-		}
-		
-		if (i==1){
-			g.drawLine();
+			g.drawOval(5, 5, x - 10, y - 10);
 		}
 
+		else if (i == 1) {
+			g.drawLine(x - 10, y - 10, 10, 10);
+			g.drawLine(x - 10, 10, 10, y - 10);
+		} else {
+			JLabel blank = new JLabel();
+			add(blank);
+		}
 	}
 }
